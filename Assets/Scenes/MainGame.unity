@@ -978,6 +978,7 @@ GameObject:
   - component: {fileID: 518702404}
   - component: {fileID: 518702406}
   - component: {fileID: 518702405}
+  - component: {fileID: 518702408}
   m_Layer: 5
   m_Name: CropTypes
   m_TagString: Untagged
@@ -1043,6 +1044,14 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!222 &518702408
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 518702403}
+  m_CullTransparentMesh: 1
 --- !u!1 &581737929
 GameObject:
   m_ObjectHideFlags: 0

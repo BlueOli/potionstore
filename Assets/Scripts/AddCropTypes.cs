@@ -44,7 +44,7 @@ public class AddCropTypes : MonoBehaviour
                     Button buttonComponent = imageObject.AddComponent<Button>();
 
                     // TODO Agregar el script que se encarga de setear el tipo de cultivo seleccionado
-                    //SelectedCropType selectedCropTypeScript = imageObject.AddComponent<SelectedCropType>();
+                    SelectCropType selectedCropTypeScript = imageObject.AddComponent<SelectCropType>();
                     // selectedCropTypeScript.SetSomeProperty(someValue);
                 }
                 else
