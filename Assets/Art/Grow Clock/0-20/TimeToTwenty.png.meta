@@ -1,0 +1,649 @@
+fileFormatVersion: 2
+guid: 86add882cfe3d2a409d68393532b03f0
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TimeToTwenty_0
+      rect:
+        serializedVersion: 2
+        x: 1731
+        y: 49
+        width: 461
+        height: 463
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f89c66fc07bed8a4795ded96321809d0
+      internalID: 621650467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeToTwenty_1
+      rect:
+        serializedVersion: 2
+        x: 4531
+        y: 49
+        width: 464
+        height: 460
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 097c8a0a61f75954ca06afe864f2411b
+      internalID: 172864252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeToTwenty_2
+      rect:
+        serializedVersion: 2
+        x: 6767
+        y: 49
+        width: 465
+        height: 460
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bb9586f769b152428e6b0f83202cf88
+      internalID: -275263089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeToTwenty_4
+      rect:
+        serializedVersion: 2
+        x: 7330
+        y: 49
+        width: 462
+        height: 462
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 748906dfdd4de6d408c55694da8db390
+      internalID: 1185206683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeToTwenty_5
+      rect:
+        serializedVersion: 2
+        x: 7887
+        y: 49
+        width: 465
+        height: 463
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83cb09f2481d9ba44b283640ead2c90a
+      internalID: -1189442154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeToTwenty_6
+      rect:
+        serializedVersion: 2
+        x: 9007
+        y: 52
+        width: 467
+        height: 460
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1466524b73cbb9459536b8a03704f9c
+      internalID: -404971661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeToTwenty_7
+      rect:
+        serializedVersion: 2
+        x: 9567
+        y: 49
+        width: 467
+        height: 465
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d86d9db971d74eb47b7bb43da03240ae
+      internalID: -517682857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeToTwenty_8
+      rect:
+        serializedVersion: 2
+        x: 10132
+        y: 49
+        width: 459
+        height: 460
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3041677b0d715464789d92669f600059
+      internalID: -1893139867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeToTwenty_10
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 49
+        width: 466
+        height: 462
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88773cb56ebd4f048a0eb6c1edf9cf5f
+      internalID: 1918913112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeToTwenty_11
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 49
+        width: 467
+        height: 462
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 102a70e104a1fc646afe6b991bd53d5d
+      internalID: 914548274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeToTwenty_12
+      rect:
+        serializedVersion: 2
+        x: 1169
+        y: 49
+        width: 465
+        height: 462
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67fbcd30c528e5543b5d4a08f831c551
+      internalID: -1272802054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeToTwenty_13
+      rect:
+        serializedVersion: 2
+        x: 2288
+        y: 52
+        width: 465
+        height: 459
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65723f61ebafdc3468327a414610c8d1
+      internalID: 991804362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeToTwenty_14
+      rect:
+        serializedVersion: 2
+        x: 2849
+        y: 49
+        width: 461
+        height: 462
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2306159608a2bb646a71961ac8119551
+      internalID: 50299224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeToTwenty_15
+      rect:
+        serializedVersion: 2
+        x: 3408
+        y: 49
+        width: 485
+        height: 462
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8770b74c5e1747a40a81bf0e29125381
+      internalID: 258250679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeToTwenty_17
+      rect:
+        serializedVersion: 2
+        x: 3971
+        y: 50
+        width: 459
+        height: 461
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c643d67239d1f840be84321df9ecde8
+      internalID: 1211397093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeToTwenty_18
+      rect:
+        serializedVersion: 2
+        x: 5086
+        y: 49
+        width: 464
+        height: 462
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6a31f9b84107f146881eaf88ed271a2
+      internalID: -1677855960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeToTwenty_19
+      rect:
+        serializedVersion: 2
+        x: 5648
+        y: 49
+        width: 465
+        height: 462
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94b0bfe5e3024ed4aaff60787d2e4d97
+      internalID: 1866897206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeToTwenty_21
+      rect:
+        serializedVersion: 2
+        x: 6210
+        y: 49
+        width: 465
+        height: 462
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e67b3f37e4856d248831af44e97c6176
+      internalID: -584702418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeToTwenty_22
+      rect:
+        serializedVersion: 2
+        x: 8450
+        y: 49
+        width: 465
+        height: 462
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b3eea9a36e685944bbfef224646cfb9
+      internalID: 1360615528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeToTwenty_23
+      rect:
+        serializedVersion: 2
+        x: 10689
+        y: 52
+        width: 465
+        height: 459
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b92ece9624e02748a06130f5f59cd1e
+      internalID: 448492534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeToTwenty_24
+      rect:
+        serializedVersion: 2
+        x: 11246
+        y: 49
+        width: 465
+        height: 462
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 098918bc2ac1e3c4ba9838457c3e9ac0
+      internalID: -213648342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      TimeToTwenty_15: 258250679
+      TimeToTwenty_0: 621650467
+      TimeToTwenty_45: -183015552
+      TimeToTwenty_17: 1211397093
+      TimeToTwenty_22: 1360615528
+      TimeToTwenty_23: 448492534
+      TimeToTwenty_39: 528323409
+      TimeToTwenty_48: -525878403
+      TimeToTwenty_1: 172864252
+      TimeToTwenty_30: -1554379731
+      TimeToTwenty_2: -275263089
+      TimeToTwenty_21: -584702418
+      TimeToTwenty_4: 1185206683
+      TimeToTwenty_32: -664771387
+      TimeToTwenty_8: -1893139867
+      TimeToTwenty_27: 2008007179
+      TimeToTwenty_5: -1189442154
+      TimeToTwenty_25: 1742230776
+      TimeToTwenty_41: -1598043256
+      TimeToTwenty_31: -1250988268
+      TimeToTwenty_36: -548686778
+      TimeToTwenty_35: -597542182
+      TimeToTwenty_47: 1329744846
+      TimeToTwenty_38: -523075325
+      TimeToTwenty_9: -1545804767
+      TimeToTwenty_34: -165311309
+      TimeToTwenty_40: 803787451
+      TimeToTwenty_18: -1677855960
+      TimeToTwenty_26: -1070312502
+      TimeToTwenty_14: 50299224
+      TimeToTwenty_3: -243772521
+      TimeToTwenty_12: -1272802054
+      TimeToTwenty_20: 278371996
+      TimeToTwenty_10: 1918913112
+      TimeToTwenty_42: -215512138
+      TimeToTwenty_11: 914548274
+      TimeToTwenty_24: -213648342
+      TimeToTwenty_33: -802483086
+      TimeToTwenty_43: -1173236143
+      TimeToTwenty_16: -1684617507
+      TimeToTwenty_28: -240420211
+      TimeToTwenty_37: -1766279987
+      TimeToTwenty_29: 238187515
+      TimeToTwenty_7: -517682857
+      TimeToTwenty_13: 991804362
+      TimeToTwenty_19: 1866897206
+      TimeToTwenty_6: -404971661
+      TimeToTwenty_44: 415236290
+      TimeToTwenty_46: 1325438597
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

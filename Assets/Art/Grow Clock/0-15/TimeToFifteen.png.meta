@@ -1,0 +1,566 @@
+fileFormatVersion: 2
+guid: 5c99bb971e1c9e8409515359a36e375c
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TimeToFifteen_11
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 50
+        width: 460
+        height: 460
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 025937451e5621a488b1d3333335f678
+      internalID: -2057434062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeToFifteen_13
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 50
+        width: 460
+        height: 460
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ddbc9b6cd193eb4c9418113e715ba66
+      internalID: 968397647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeToFifteen_14
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 50
+        width: 460
+        height: 460
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30897172a70e37e4a904e029c5d22d1a
+      internalID: -1286882021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeToFifteen_15
+      rect:
+        serializedVersion: 2
+        x: 1730
+        y: 50
+        width: 460
+        height: 460
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da602af807739844082d162df5ecf706
+      internalID: 1402090622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeToFifteen_17
+      rect:
+        serializedVersion: 2
+        x: 2290
+        y: 50
+        width: 460
+        height: 460
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8caf49524aa519148b6c9cc27439a161
+      internalID: -191837165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeToFifteen_18
+      rect:
+        serializedVersion: 2
+        x: 2850
+        y: 50
+        width: 460
+        height: 460
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b8cd6687f73abe429e3ad84af38e7d4
+      internalID: -281922745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeToFifteen_19
+      rect:
+        serializedVersion: 2
+        x: 3410
+        y: 50
+        width: 460
+        height: 460
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ce1c7e36b79c08479c37498d62cf8cd
+      internalID: 125464248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeToFifteen_21
+      rect:
+        serializedVersion: 2
+        x: 3970
+        y: 50
+        width: 460
+        height: 460
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7096950214930df4da2496e2385b4f34
+      internalID: -1855275152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeToFifteen_22
+      rect:
+        serializedVersion: 2
+        x: 4530
+        y: 50
+        width: 460
+        height: 460
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e96dcc17ed70e0840be221afb70fd3d0
+      internalID: 146967507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeToFifteen_23
+      rect:
+        serializedVersion: 2
+        x: 5090
+        y: 50
+        width: 460
+        height: 460
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98ab3788a15479e49a08b8c930f3c0b9
+      internalID: 293810689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeToFifteen_25
+      rect:
+        serializedVersion: 2
+        x: 5650
+        y: 50
+        width: 460
+        height: 460
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce779785aa66c6c47afd26b2bf94d704
+      internalID: -704540706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeToFifteen_26
+      rect:
+        serializedVersion: 2
+        x: 6210
+        y: 50
+        width: 460
+        height: 460
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98022a682b266ef41a67afa08a17ccbf
+      internalID: -876127142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeToFifteen_27
+      rect:
+        serializedVersion: 2
+        x: 6770
+        y: 50
+        width: 460
+        height: 460
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 409d54bfc7abac641a3092e4d4bf501e
+      internalID: -196883528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeToFifteen_29
+      rect:
+        serializedVersion: 2
+        x: 7330
+        y: 50
+        width: 460
+        height: 460
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d8aca7b99c01244a8c1e3a0a614d9c7
+      internalID: 1366137424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeToFifteen_30
+      rect:
+        serializedVersion: 2
+        x: 7890
+        y: 50
+        width: 460
+        height: 460
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3964e763fedeb2d4d8346b064a967ecb
+      internalID: -898946283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeToFifteen_31
+      rect:
+        serializedVersion: 2
+        x: 8450
+        y: 50
+        width: 460
+        height: 460
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 822145f6eb38c2147ac2704139732d59
+      internalID: 1985526230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      TimeToFifteen_40: 880525740
+      TimeToFifteen_65: 65618335
+      TimeToFifteen_19: 125464248
+      TimeToFifteen_39: -638193463
+      TimeToFifteen_8: -536182829
+      TimeToFifteen_54: 764091993
+      TimeToFifteen_32: 974155960
+      TimeToFifteen_22: 146967507
+      TimeToFifteen_67: -1597987252
+      TimeToFifteen_33: 269746415
+      TimeToFifteen_1: -1977636068
+      TimeToFifteen_3: -352042684
+      TimeToFifteen_12: -443891880
+      TimeToFifteen_63: -304739850
+      TimeToFifteen_29: 1366137424
+      TimeToFifteen_68: -1341214426
+      TimeToFifteen_42: -159317191
+      TimeToFifteen_28: -106777080
+      TimeToFifteen_36: 2136400755
+      TimeToFifteen_26: -876127142
+      TimeToFifteen_11: -2057434062
+      TimeToFifteen_34: 932881364
+      TimeToFifteen_59: 637917771
+      TimeToFifteen_10: -2137247388
+      TimeToFifteen_2: -2005259182
+      TimeToFifteen_58: -1595789970
+      TimeToFifteen_38: 192111754
+      TimeToFifteen_5: -1088733474
+      TimeToFifteen_37: 1480737927
+      TimeToFifteen_35: -1824192466
+      TimeToFifteen_53: 360059129
+      TimeToFifteen_70: 1301894935
+      TimeToFifteen_43: -739836545
+      TimeToFifteen_27: -196883528
+      TimeToFifteen_16: -1566434021
+      TimeToFifteen_46: -1680181702
+      TimeToFifteen_14: -1286882021
+      TimeToFifteen_17: -191837165
+      TimeToFifteen_24: 306699877
+      TimeToFifteen_25: -704540706
+      TimeToFifteen_50: 841873368
+      TimeToFifteen_64: 2138356187
+      TimeToFifteen_48: 567255299
+      TimeToFifteen_4: 1323746225
+      TimeToFifteen_49: 985710418
+      TimeToFifteen_52: -1445129859
+      TimeToFifteen_44: 1040076331
+      TimeToFifteen_6: -277809601
+      TimeToFifteen_61: -692548424
+      TimeToFifteen_47: -540661203
+      TimeToFifteen_0: -137611135
+      TimeToFifteen_45: -1203033369
+      TimeToFifteen_51: -1923503007
+      TimeToFifteen_7: -553184084
+      TimeToFifteen_60: 1780199785
+      TimeToFifteen_69: -1263957186
+      TimeToFifteen_9: 721658363
+      TimeToFifteen_56: 1694748364
+      TimeToFifteen_23: 293810689
+      TimeToFifteen_13: 968397647
+      TimeToFifteen_62: 1230699631
+      TimeToFifteen_15: 1402090622
+      TimeToFifteen_31: 1985526230
+      TimeToFifteen_21: -1855275152
+      TimeToFifteen_20: -850113972
+      TimeToFifteen_30: -898946283
+      TimeToFifteen_55: -406433090
+      TimeToFifteen_41: 1591901715
+      TimeToFifteen_57: 1437484984
+      TimeToFifteen_18: -281922745
+      TimeToFifteen_66: 445009960
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
