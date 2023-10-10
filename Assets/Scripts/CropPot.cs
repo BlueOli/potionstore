@@ -1,10 +1,25 @@
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class CropPot : MonoBehaviour
 {
     public PlantType plantType;
     private bool isGrowing = false;
     private float growthTimer = 0f;
+
+    private void Start()
+    {
+        Button button = GetComponent<Button>();
+        if (button == null)
+        {
+            button = gameObject.AddComponent<Button>();
+        }
+
+        // Add a listener to the button click event
+        button.onClick.AddListener(CollectPlant);
+    }
+
 
     void Update()
     {

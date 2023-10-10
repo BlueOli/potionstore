@@ -5,6 +5,10 @@ public class SelectCropType : MonoBehaviour
 {
     private Button button;
     private Image parentImage;
+    private CropPot cropPot;
+    public PlantType myPlantType;
+
+    public PlantType MyPlantType { get => myPlantType; set => myPlantType = value; }
 
     void Start()
     {
@@ -12,7 +16,7 @@ public class SelectCropType : MonoBehaviour
 
         Transform cropHolder = transform.parent;
         parentImage = cropHolder.transform.parent.GetComponent<Image>();
-
+        cropPot = cropHolder.transform.parent.GetComponent<CropPot>();
         if (button == null)
         {
             Debug.LogError("Button component not found");
@@ -27,12 +31,19 @@ public class SelectCropType : MonoBehaviour
         if (button != null) { button.onClick.AddListener(OnButtonClick); }
     }
 
+    public void SetCrop(PlantType plant)
+    {
+        cropPot.plantType = plant;
+        cropPot.StartGrowingPlant();
+    }
+
     // Method to handle button click event
     void OnButtonClick()
     {
         if (parentImage != null)
         {
             parentImage.sprite = GetComponent<Image>().sprite;
+            SetCrop(myPlantType);
         }
         else
         {

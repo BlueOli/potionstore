@@ -521,6 +521,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61b6e2d636667664f80c1a906bffff01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plantType:
+    plantIcon: {fileID: 0}
+    plantName: 
+    growTime: 0
 --- !u!114 &150019144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1102,6 +1106,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61b6e2d636667664f80c1a906bffff01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plantType:
+    plantIcon: {fileID: 0}
+    plantName: 
+    growTime: 0
 --- !u!114 &518702406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1321,6 +1329,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61b6e2d636667664f80c1a906bffff01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plantType:
+    plantIcon: {fileID: 0}
+    plantName: 
+    growTime: 0
 --- !u!114 &605478793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2456,7 +2468,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1419131369
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2943,6 +2955,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61b6e2d636667664f80c1a906bffff01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plantType:
+    plantIcon: {fileID: 0}
+    plantName: 
+    growTime: 0
 --- !u!114 &1624572055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3171,6 +3187,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61b6e2d636667664f80c1a906bffff01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plantType:
+    plantIcon: {fileID: 0}
+    plantName: 
+    growTime: 0
 --- !u!114 &1712204450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3211,6 +3231,7 @@ GameObject:
   - component: {fileID: 1712498983}
   - component: {fileID: 1712498982}
   - component: {fileID: 1712498984}
+  - component: {fileID: 1712498985}
   m_Layer: 5
   m_Name: Top
   m_TagString: Untagged
@@ -3346,6 +3367,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b09507ab78254a4c8ef352ccdd94d6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1712498985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712498978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e53cdabfeb5319f4d97af80c9052b186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plantType:
+    plantIcon: {fileID: 0}
+    plantName: 
+    growTime: 0
 --- !u!1 &1731842981
 GameObject:
   m_ObjectHideFlags: 0
@@ -3693,6 +3730,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61b6e2d636667664f80c1a906bffff01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plantType:
+    plantIcon: {fileID: 0}
+    plantName: 
+    growTime: 0
 --- !u!114 &1911500273
 MonoBehaviour:
   m_ObjectHideFlags: 0

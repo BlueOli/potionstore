@@ -8,6 +8,8 @@ public class AddCropTypes : MonoBehaviour
 
     private bool imagesCreated = false;
 
+    public PlantType plantType = null;
+
     private void Start()
     {
         cropType = transform.parent.GetComponent<CropType>().type.ToString();
@@ -45,7 +47,9 @@ public class AddCropTypes : MonoBehaviour
 
                     // TODO Agregar el script que se encarga de setear el tipo de cultivo seleccionado
                     SelectCropType selectedCropTypeScript = imageObject.AddComponent<SelectCropType>();
-                    // selectedCropTypeScript.SetSomeProperty(someValue);
+                    plantType = CreatePlantType(imageObject.name, imageObject.GetComponent<Image>().sprite, cropType);
+                    selectedCropTypeScript.MyPlantType = plantType;
+                    
                 }
                 else
                 {
@@ -56,4 +60,65 @@ public class AddCropTypes : MonoBehaviour
             imagesCreated = true;
         }
     }
+
+    private PlantType CreatePlantType(string plantName, Sprite img, string cropType)
+    {
+        // Create a new PlantType object
+        PlantType plantType = new PlantType();
+        plantType.plantName = plantName;
+        plantType.plantIcon = img; 
+        plantType.growTime = SelectGrowTime(plantName, cropType);
+          
+        return plantType;
+    }
+
+    /// <summary>   
+    /// Esta funcion actua como ajuste de balance de los tiempos de crecimiento de las plantas. Los valores a utilizar son 8-10-12-15-20
+    /// </summary>
+    private float SelectGrowTime(string plantName, string cropType)
+    {
+        if (cropType == "Mushroom")
+        {
+            switch (plantName)
+            {
+                case "BowRoom":
+                    return 20f;
+                case "GlowRoom":
+                    return 12f;
+                case "NormalRoom":
+                    return 8f;
+                case "RedRoom":
+                    return 8f;
+                case "SwampRoom":
+                    return 12f;
+                case "ToxicRoom":
+                    return 15f;
+                default:
+                    break;
+            }
+
+        }
+        else if (cropType == "Plant")
+        {
+            switch (plantName)
+            {
+                case "Mandragora":
+                    return 20f;
+                case "SpikeGlobe":
+                    return 12f;
+                case "Acorn":
+                    return 8f;
+                case "HardRoot":
+                    return 8f;
+                case "FrozenRoot":
+                    return 12f;
+                case "GoldLeaf":
+                    return 15f;
+                default:
+                    break;
+            }
+        }
+        return 0f;
+    }
+
 }
