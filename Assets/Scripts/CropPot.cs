@@ -7,7 +7,8 @@ public class CropPot : MonoBehaviour
     public PlantType plantType;
     private bool isGrowing = false;
     private float growthTimer = 0f;
-
+    private Sprite defImage;
+    private Image myImage;
     private void Start()
     {
         Button button = GetComponent<Button>();
@@ -15,7 +16,8 @@ public class CropPot : MonoBehaviour
         {
             button = gameObject.AddComponent<Button>();
         }
-
+        defImage = GetComponent<Image>().sprite;
+        myImage = GetComponent<Image>();
         // Add a listener to the button click event
         button.onClick.AddListener(CollectPlant);
     }
@@ -61,6 +63,7 @@ public class CropPot : MonoBehaviour
 
             // Reset the crop pot for the next use
             ResetCropPot();
+            myImage.sprite = defImage;
         }
         else
         {
