@@ -5,6 +5,7 @@ using static CropType;
 public class DisplayCropType : MonoBehaviour
 {
     GameObject objectToActivate;
+    CropPot cropPot;
 
     void Start()
     {
@@ -13,7 +14,7 @@ public class DisplayCropType : MonoBehaviour
         {
             button = gameObject.AddComponent<Button>();
         }
-
+        cropPot = GetComponent<CropPot>();
         // Add a listener to the button click event
         button.onClick.AddListener(ActivateObject);
 
@@ -30,24 +31,28 @@ public class DisplayCropType : MonoBehaviour
             }
             else
             {
-                objectToActivate.SetActive(true);
-
-                // Check the crop type
-                CropType cropType = objectToActivate.GetComponent<CropType>();
-
-                if (cropType != null)
+                if (cropPot.CanOpenTypes)
                 {
-                    Transform cropTypes = objectToActivate.transform.Find("CropTypes");
-                    
-                    if (cropTypes != null)
+                    objectToActivate.SetActive(true);
+
+                    // Check the crop type
+                    CropType cropType = objectToActivate.GetComponent<CropType>();
+
+                    if (cropType != null)
                     {
-                        cropTypes.gameObject.SetActive(!cropTypes.gameObject.activeSelf);
+                        Transform cropTypes = objectToActivate.transform.Find("CropTypes");
+
+                        if (cropTypes != null)
+                        {
+                            cropTypes.gameObject.SetActive(!cropTypes.gameObject.activeSelf);
+                        }
+                    }
+                    else
+                    {
+                        Debug.LogWarning("CropType component not found");
                     }
                 }
-                else
-                {
-                    Debug.LogWarning("CropType component not found");
-                }
+                
             }
         }
         else

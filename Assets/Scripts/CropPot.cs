@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +10,10 @@ public class CropPot : MonoBehaviour
     private float growthTimer = 0f;
     private Sprite defImage;
     private Image myImage;
+    private bool canOpenTypes = true;
+
+    public bool CanOpenTypes { get => canOpenTypes; set => canOpenTypes = value; }
+
     private void Start()
     {
         Button button = GetComponent<Button>();
@@ -45,6 +50,7 @@ public class CropPot : MonoBehaviour
     /// </summary>
     public void StartGrowingPlant()
     {
+        canOpenTypes = false;
         isGrowing = true;
         SetStatus("Growing");
     }
@@ -83,6 +89,14 @@ public class CropPot : MonoBehaviour
         growthTimer = 0f;
         isGrowing = false;
         SetStatus("Empty");
+        StartCoroutine(GrowPlant());
+    }
+
+    IEnumerator GrowPlant()
+    {
+        yield return new WaitForSeconds(0.2f);
+
+        canOpenTypes = true;
     }
 }
 
