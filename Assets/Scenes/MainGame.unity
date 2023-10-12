@@ -679,6 +679,7 @@ MonoBehaviour:
     plantIcon: {fileID: 0}
     plantName: 
     growTime: 0
+    typeID: 0
 --- !u!114 &150019144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1113,6 +1114,7 @@ MonoBehaviour:
     plantIcon: {fileID: 0}
     plantName: 
     growTime: 0
+    typeID: 0
 --- !u!1 &252632800
 GameObject:
   m_ObjectHideFlags: 0
@@ -2221,6 +2223,7 @@ MonoBehaviour:
     plantIcon: {fileID: 0}
     plantName: 
     growTime: 0
+    typeID: 0
 --- !u!114 &605478793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3400,6 +3403,7 @@ MonoBehaviour:
     plantIcon: {fileID: 0}
     plantName: 
     growTime: 0
+    typeID: 0
 --- !u!1 &832878693
 GameObject:
   m_ObjectHideFlags: 0
@@ -3781,6 +3785,7 @@ MonoBehaviour:
     plantIcon: {fileID: 0}
     plantName: 
     growTime: 0
+    typeID: 0
 --- !u!1 &983010076
 GameObject:
   m_ObjectHideFlags: 0
@@ -5980,6 +5985,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1588351873}
   m_CullTransparentMesh: 1
+--- !u!1 &1603596164
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1603596166}
+  - component: {fileID: 1603596165}
+  m_Layer: 0
+  m_Name: PlayerManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1603596165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603596164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d552ebbeb09d8949a46520af28a00ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1603596166
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603596164}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 511.96463, y: 943.9116, z: -33.33211}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1624572052
 GameObject:
   m_ObjectHideFlags: 0
@@ -6034,6 +6083,7 @@ MonoBehaviour:
     plantIcon: {fileID: 0}
     plantName: 
     growTime: 0
+    typeID: 0
 --- !u!114 &1624572055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6807,6 +6857,7 @@ MonoBehaviour:
     plantIcon: {fileID: 0}
     plantName: 
     growTime: 0
+    typeID: 0
 --- !u!1 &1821733491
 GameObject:
   m_ObjectHideFlags: 0
@@ -6978,6 +7029,7 @@ GameObject:
   - component: {fileID: 1850533414}
   - component: {fileID: 1850533416}
   - component: {fileID: 1850533415}
+  - component: {fileID: 1850533417}
   m_Layer: 5
   m_Name: Plant
   m_TagString: Untagged
@@ -7045,6 +7097,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1850533413}
   m_CullTransparentMesh: 1
+--- !u!114 &1850533417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850533413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cb59ae3c5cfac94e9115362d38e0181, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1911500270
 GameObject:
   m_ObjectHideFlags: 0
@@ -7099,6 +7163,7 @@ MonoBehaviour:
     plantIcon: {fileID: 0}
     plantName: 
     growTime: 0
+    typeID: 0
 --- !u!114 &1911500273
 MonoBehaviour:
   m_ObjectHideFlags: 0

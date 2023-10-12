@@ -66,6 +66,7 @@ public class CropPot : MonoBehaviour
             // Perform collect action
             // TODO: Add the plant to the player's inventory, play a sound, etc.
             SetStatus("Collected");
+            PlayerManager.Instance.AddMaterialToInventory(plantType);
 
             // Reset the crop pot for the next use
             ResetCropPot();
