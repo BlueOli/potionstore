@@ -68,7 +68,7 @@ public class AddCropTypes : MonoBehaviour
         plantType.plantName = plantName;
         plantType.plantIcon = img; 
         plantType.growTime = SelectGrowTime(plantName, cropType);
-          
+        plantType.typeID = cropType == "Plant" ? 1 : 2;
         return plantType;
     }
 

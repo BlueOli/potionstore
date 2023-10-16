@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
-    //Start Singleton
+    #region Singleton
     private static PlayerManager instance;
     public static PlayerManager Instance
     {
@@ -34,15 +34,17 @@ public class PlayerManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    //End Singleton
-
+    #endregion
 
     private List<PotionType> potionInventory = new List<PotionType>(); // List to store crafted potions
-    private List<PlantType> mushroomInventory = new List<PlantType>(); // List to store plant types
-    private List<PlantType> plantsInventory = new List<PlantType>(); // List to store plant types
+ 
 
     private int fame = 0; // Player's fame attribute (starts at 0)
 
+    public PlantPManager plantsManager;
+    public PlantPManager mushroomsManager;
+
+  
     /// <summary>
     /// Add a crafted potion to the potion inventory. It's going to be stored on a list of PotionType objects.
     /// </summary>
@@ -78,17 +80,16 @@ public class PlayerManager : MonoBehaviour
         // Check the typeID and add the plant type to the appropriate inventory list
         if (plantType.typeID == 1)
         {
-            plantsInventory.Add(plantType);
+            plantsManager.UpdatePlantQuantity(plantType.plantName, 1);
         }
         else if (plantType.typeID == 2)
         {
-            mushroomInventory.Add(plantType);
+            mushroomsManager.UpdatePlantQuantity(plantType.plantName, 1);
         }
         else
         {
             Debug.LogError("Invalid plant type ID: " + plantType.typeID);
         }
-
     }
 
     /// <summary>
@@ -97,36 +98,18 @@ public class PlayerManager : MonoBehaviour
     /// <param name="plantType"></param>
     public void RemoveMaterialFromInventory(PlantType plantType)
     {
-        // Check the typeID and add the plant type to the appropriate inventory list
         if (plantType.typeID == 1)
         {
-            if (plantsInventory.Contains(plantType))
-            {
-                plantsInventory.Remove(plantType);
-            }
-            else
-            {
-                Debug.Log("Plant type not found in inventory.");
-            }
+            plantsManager.UpdatePlantQuantity(plantType.plantName, -1);
         }
         else if (plantType.typeID == 2)
         {
-            if (mushroomInventory.Contains(plantType))
-            {
-                mushroomInventory.Remove(plantType);
-            }
-            else
-            {
-                Debug.Log("Plant type not found in inventory.");
-            }
+            mushroomsManager.UpdatePlantQuantity(plantType.plantName, -1);
         }
         else
         {
             Debug.LogError("Invalid plant type ID: " + plantType.typeID);
         }
-
-        // Remove a plant type from the material inventory.
-        
     }
 
     public void IncreaseFame(int amount)
