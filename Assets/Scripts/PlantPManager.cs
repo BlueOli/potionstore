@@ -39,7 +39,7 @@ public class PlantPManager : MonoBehaviour
         }
     }
 
-    int GetPlantQuantity(string plantName)
+    public int GetPlantQuantity(string plantName)
     {
         if (plantQuantities.ContainsKey(plantName))
         {
@@ -54,7 +54,7 @@ public class PlantPManager : MonoBehaviour
 
     void SetPlantQuantity(string plantName, int quantity)
     {
-        plantQuantities[plantName] += quantity;
+        plantQuantities[plantName] += quantity;        
     }
 
     public void UpdatePlantQuantity(string plantName, int newQuantity)
