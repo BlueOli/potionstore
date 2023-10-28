@@ -64,7 +64,7 @@ public class AddCropTypes : MonoBehaviour
     private PlantType CreatePlantType(string plantName, Sprite img, string cropType)
     {
         // Create a new PlantType object
-        PlantType plantType = new PlantType();
+        PlantType plantType = new PlantType(plantName,1,1);
         plantType.plantName = plantName;
         plantType.plantIcon = img; 
         plantType.growTime = SelectGrowTime(plantName, cropType);

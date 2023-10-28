@@ -149,8 +149,7 @@ public class PotionMaker : MonoBehaviour
 
     private bool MaterialAddedToCaldreum()
     {
-        // Check if material has been added to caldreum
-        
+        // Check if material has been added to caldreum        
         // Return true if added, false otherwise
         return CheckMaterials(potionType);
     }
@@ -158,7 +157,18 @@ public class PotionMaker : MonoBehaviour
     private void WaitForMixing()
     {
         // Wait for function "MixCaldreum" to be called
+        StartCoroutine(WaitForMixingCoroutine());
+    }
+    private IEnumerator WaitForMixingCoroutine()
+    {
         Debug.Log("Waiting for mixing");
+        while (!MixCaldreum())
+        {
+            if (stopMaking) { break; }
+            yield return null;
+        }
+        if (stopMaking) { yield break; }
+        WaitForVessel();
     }
 
     private void WaitForVessel()
@@ -166,10 +176,15 @@ public class PotionMaker : MonoBehaviour
         // Wait for function "AddToVessel" to be called
     }
 
-    private void MixCaldreum()
+    private bool MixCaldreum()
     {
         // Mixing logic
-        WaitForVessel();
+        // IF THE PLAYER DOES THE MINIGAME CORRECTLY
+        if (null==null)
+        {
+            return true;
+        }
+        return false;
     }
 
     private void AddToVessel()
