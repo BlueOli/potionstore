@@ -7,4 +7,11 @@ public class PlantType
     public string plantName; 
     public float growTime;
     public int typeID;
+
+    public PlantType(string name, float time, int id)
+    {
+        plantName = name;
+        growTime = time;
+        typeID = id;
+    }
 }

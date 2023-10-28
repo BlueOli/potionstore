@@ -9,13 +9,27 @@ public class PotionMaker : MonoBehaviour
     private PlantType req1, req2, req3;
     public PlantPManager plantManager;
     public PlantPManager roomManager;
+    private bool stopMaking = false;
 
-    public void MakePotion(PotionType type)
+    public bool StopMaking { get => stopMaking; set => stopMaking = value; }
+
+    PotionType testPotion = new PotionType(PotionType.PotionTier.Tier1, new PlantType("Acorn", 1,1),1,"test","",1,1);
+
+    private void MakePotionInternal(PotionType type)
     {
         potionType = type;
         DetermineRequirements(potionType);
-        CheckMaterials(potionType);
+        //CheckMaterials(potionType);
+        WaitForMaterialAddition();
     }
+    public void MakePotionTest()
+    {
+        potionType = testPotion;
+        DetermineRequirements(potionType);
+        //CheckMaterials(potionType);
+        WaitForMaterialAddition();
+    }
+
 
     private void DetermineRequirements(PotionType pType)
     {
@@ -39,7 +53,7 @@ public class PotionMaker : MonoBehaviour
         }
     }
 
-    private void CheckMaterials(PotionType pType)
+    private bool CheckMaterials(PotionType pType)
     {
         switch (pType.type)
         {
@@ -47,7 +61,9 @@ public class PotionMaker : MonoBehaviour
                 if (HasEnoughMaterials(req1))
                 {
                     // Wait for materials to be added to caldreum
-                    WaitForMaterialAddition();
+                    //WaitForMaterialAddition();
+
+                    return true;
                 }
                 else{Debug.LogError("Not enough materials to make the potion.");}
                 break;
@@ -55,7 +71,8 @@ public class PotionMaker : MonoBehaviour
                 if (HasEnoughMaterials(req1) && HasEnoughMaterials(req2))
                 {
                     // Wait for materials to be added to caldreum
-                    WaitForMaterialAddition();
+                    //WaitForMaterialAddition();
+                    return true;
                 }
                 else{Debug.LogError("Not enough materials to make the potion.");}
                 break;
@@ -63,7 +80,8 @@ public class PotionMaker : MonoBehaviour
                 if (HasEnoughMaterials(req1) && HasEnoughMaterials(req2) && HasEnoughMaterials(req3))
                 {
                     // Wait for materials to be added to caldreum
-                    WaitForMaterialAddition();
+                    //WaitForMaterialAddition();
+                    return true;
                 }
                 else{Debug.LogError("Not enough materials to make the potion.");}
                 break;
@@ -71,9 +89,15 @@ public class PotionMaker : MonoBehaviour
                 Debug.LogError("Invalid potion type!");
                 break;
         }
-        
+        return false;
     }
 
+    
+    /// <summary>
+    /// Checks if the player has enough materials to make the potion, then subtracts the materials from the player's inventory
+    /// </summary>
+    /// <param name="material"></param>
+    /// <returns></returns>
     private bool HasEnoughMaterials(PlantType material)
     {
         if (material == null)
@@ -104,38 +128,42 @@ public class PotionMaker : MonoBehaviour
 
     private void WaitForMaterialAddition()
     {
-        // Wait for function "AddedMaterialToCaldreum" to be called
-        // For example, you can use coroutines or events to wait for the function call.
-        // Coroutine example: StartCoroutine(WaitForMaterialCoroutine());
-        // Event example: Define a custom event and wait for it to be raised.
+        stopMaking = false;
+        StartCoroutine(WaitForMaterialCoroutine());       
     }
 
-    private void WaitForMixing()
-    {
-        // Wait for function "MixCaldreum" to be called
-    }
-
-    private void WaitForVessel()
-    {
-        // Wait for function "AddToVessel" to be called
-    }
+    
 
     // Example coroutine for waiting
     private IEnumerator WaitForMaterialCoroutine()
     {
+        Debug.Log("Waiting for material addition");
         while (!MaterialAddedToCaldreum())
         {
+            if (stopMaking) { break;}
             yield return null;
         }
-
+        if (stopMaking) { yield break; }
         WaitForMixing();
     }
 
     private bool MaterialAddedToCaldreum()
     {
         // Check if material has been added to caldreum
+        
         // Return true if added, false otherwise
-        return false;
+        return CheckMaterials(potionType);
+    }
+
+    private void WaitForMixing()
+    {
+        // Wait for function "MixCaldreum" to be called
+        Debug.Log("Waiting for mixing");
+    }
+
+    private void WaitForVessel()
+    {
+        // Wait for function "AddToVessel" to be called
     }
 
     private void MixCaldreum()
