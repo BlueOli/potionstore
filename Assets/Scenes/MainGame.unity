@@ -1971,8 +1971,8 @@ MonoBehaviour:
   m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 90, y: 90}
-  m_Spacing: {x: 21.1, y: 0}
+  m_CellSize: {x: 140, y: 80}
+  m_Spacing: {x: 44, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
 --- !u!114 &568223174
@@ -1988,12 +1988,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   potionPrefabContainer: {fileID: 568223170}
-  potionPrefab: {fileID: 5756354102268566596, guid: 492a0b359de31cd46a7db723ab2031ad, type: 3}
+  potionPrefab: {fileID: 5756354102268566596, guid: 60b36ad00c0ef444c9cee431703aadf9, type: 3}
   potionTypes:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - Name: Mana Potion
+    Image: {fileID: 21300000, guid: 5763c5f9f4921b34a985d25358c44fc2, type: 3}
+    Fame: 1
+    Price: 10
+  - Name: Love Potion
+    Image: {fileID: 21300000, guid: c95692a484446a7409b1071bf74fe0d3, type: 3}
+    Fame: 3
+    Price: 25
+  - Name: Health Potion
+    Image: {fileID: 21300000, guid: 0cf4162cc55728540889ea4526b0f7a7, type: 3}
+    Fame: 4
+    Price: 60
+  - Name: Poison Potion
+    Image: {fileID: 21300000, guid: c8d0b43527d92d240b55269d9c677205, type: 3}
+    Fame: 6
+    Price: 80
 --- !u!1 &581737929
 GameObject:
   m_ObjectHideFlags: 0
