@@ -10,6 +10,7 @@ public class PotionMaker : MonoBehaviour
     public PlantPManager plantManager;
     public PlantPManager roomManager;
     private bool stopMaking = false;
+    public PotionManager potionManager;
 
     public bool StopMaking { get => stopMaking; set => stopMaking = value; }
 
@@ -131,7 +132,6 @@ public class PotionMaker : MonoBehaviour
         stopMaking = false;
         StartCoroutine(WaitForMaterialCoroutine());       
     }
-
     
 
     // Example coroutine for waiting
@@ -173,8 +173,46 @@ public class PotionMaker : MonoBehaviour
 
     private void WaitForVessel()
     {
-        // Wait for function "AddToVessel" to be called
+        StartCoroutine(WaitForVesselMix());  
     }
+
+    private IEnumerator WaitForVesselMix()
+    {
+        Debug.Log("Waiting for screenshake");
+        while (!WaitingVessel())
+        {
+            if (stopMaking) { break; }
+            yield return null;
+        }
+        if (stopMaking) { yield break; }
+        AddToVessel();
+    }
+    private Vector3 previousAcceleration;
+    private float shakeDetectionThreshold =10;
+
+    private bool WaitingVessel()
+    {
+        // Get the current acceleration
+        Vector3 currentAcceleration = Input.acceleration;
+
+        // Calculate the magnitude of acceleration change
+        float accelerationMagnitude = (currentAcceleration - previousAcceleration).magnitude;
+
+        // If the acceleration change is above the threshold, consider it as screenshake
+        if (accelerationMagnitude >= shakeDetectionThreshold)
+        {
+            // Screenshake detected!
+            return true;
+        }
+
+        // Store the current acceleration for the next frame
+        previousAcceleration = currentAcceleration;
+
+        // No screenshake detected yet
+        return false;
+    }
+
+
 
     private bool MixCaldreum()
     {
@@ -191,5 +229,7 @@ public class PotionMaker : MonoBehaviour
     {
         // Adding to vessel logic
         // Potion making process is complete
+        Debug.Log("Added Potion");
+        potionManager.UpdatePotionQuantity(potionType.Name, 1);
     }
 }

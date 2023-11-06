@@ -40,10 +40,7 @@ public class PotionManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
     void SetPotionQuantity(string plantName, int quantity)
     {
         potionInventory[plantName] += quantity;

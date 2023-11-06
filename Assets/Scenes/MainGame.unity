@@ -1913,6 +1913,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plantManager: {fileID: 678873948}
   roomManager: {fileID: 1039014776}
+  potionManager: {fileID: 568223174}
 --- !u!1 &568223170
 GameObject:
   m_ObjectHideFlags: 0
