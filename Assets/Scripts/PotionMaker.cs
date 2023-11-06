@@ -33,19 +33,19 @@ public class PotionMaker : MonoBehaviour
 
     private void DetermineRequirements(PotionType pType)
     {
-        switch (pType.type)
+        switch (pType.Type)
         {
             case PotionType.PotionTier.Tier1:
-                req1 = pType.req1;                
+                req1 = pType.Req1;                
                 break;
             case PotionType.PotionTier.Tier2:
-                req1 = pType.req1;
-                req2 = pType.req2;
+                req1 = pType.Req1;
+                req2 = pType.Req2;
                 break;
             case PotionType.PotionTier.Tier3:
-                req1 = pType.req1;
-                req2 = pType.req2;
-                req3 = pType.req3;
+                req1 = pType.Req1;
+                req2 = pType.Req2;
+                req3 = pType.Req3;
                 break;
             default:
                 Debug.LogError("Invalid potion type!");
@@ -55,7 +55,7 @@ public class PotionMaker : MonoBehaviour
 
     private bool CheckMaterials(PotionType pType)
     {
-        switch (pType.type)
+        switch (pType.Type)
         {
             case PotionType.PotionTier.Tier1:
                 if (HasEnoughMaterials(req1))

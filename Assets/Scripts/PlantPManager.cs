@@ -57,7 +57,7 @@ public class PlantPManager : MonoBehaviour
         plantQuantities[plantName] += quantity;        
     }
 
-    public void UpdatePlantQuantity(string plantName, int newQuantity)
+    public void UpdatePlantQuantity (string plantName, int newQuantity)
     {
         // Update the plant quantity in the dictionary
         SetPlantQuantity(plantName, newQuantity);

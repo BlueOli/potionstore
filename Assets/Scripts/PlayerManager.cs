@@ -36,14 +36,12 @@ public class PlayerManager : MonoBehaviour
     }
     #endregion
 
-    private List<PotionType> potionInventory = new List<PotionType>(); // List to store crafted potions
- 
 
     private int fame = 0; // Player's fame attribute (starts at 0)
 
     public PlantPManager plantsManager;
     public PlantPManager mushroomsManager;
-
+    public PotionManager potionManager;
   
     /// <summary>
     /// Add a crafted potion to the potion inventory. It's going to be stored on a list of PotionType objects.
@@ -51,7 +49,7 @@ public class PlayerManager : MonoBehaviour
     /// <param name="potion"></param>
     public void AddPotionToInventory(PotionType potion)
     {
-        potionInventory.Add(potion);
+       // potionInventory.Add(potion.name,1);
     }
 
     /// <summary>
@@ -60,6 +58,7 @@ public class PlayerManager : MonoBehaviour
     /// <param name="potion"></param>
     public void RemovePotionFromInventory(PotionType potion)
     {
+        /*
         // Remove a potion from the potion inventory.
         if (potionInventory.Contains(potion))
         {
@@ -69,6 +68,7 @@ public class PlayerManager : MonoBehaviour
         {
             Debug.Log("Potion not found in inventory.");
         }
+        */
     }
 
     /// <summary>
