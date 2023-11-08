@@ -16,21 +16,21 @@ public class PotionMaker : MonoBehaviour
 
     PotionType testPotion = new PotionType(PotionType.PotionTier.Tier1, new PlantType("Acorn", 1,1),1,"test","",1,1);
 
-    private void MakePotionInternal(PotionType type)
+    public void MakePotion(PotionType type)
     {
         potionType = type;
         DetermineRequirements(potionType);
         //CheckMaterials(potionType);
         WaitForMaterialAddition();
     }
-    public void MakePotionTest()
+    /*public void MakePotionTest()
     {
         potionType = testPotion;
         DetermineRequirements(potionType);
         //CheckMaterials(potionType);
         WaitForMaterialAddition();
     }
-
+    */
 
     private void DetermineRequirements(PotionType pType)
     {
