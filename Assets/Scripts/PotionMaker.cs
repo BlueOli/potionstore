@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PotionMaker : MonoBehaviour
 {
@@ -135,7 +136,7 @@ public class PotionMaker : MonoBehaviour
     }
 
     int tapCount = 0;
-    bool isMixed = false;
+    public bool isMixed = false;
     bool isAdding = false;
     // Example coroutine for waiting
     private IEnumerator WaitForMaterialCoroutine()
@@ -173,6 +174,7 @@ public class PotionMaker : MonoBehaviour
         }
         
     }
+    public Image slideMinigameOne;
     private void HandleUserInput()
     {
         //if (stopMaking) { return; }
@@ -185,6 +187,7 @@ public class PotionMaker : MonoBehaviour
             {
                 // Increment tapCount when the screen is tapped
                 tapCount++;
+                slideMinigameOne.fillAmount = tapCount / 5f;
                 Debug.Log("Tap Count: " + tapCount);
 
                 // Check if tapCount is greater than or equal to 5
@@ -277,14 +280,15 @@ public class PotionMaker : MonoBehaviour
         return false;
     }
 
-
+    public bool isMixingDone = false;
 
     private bool MixCaldreum()
     {
         // Mixing logic
         // IF THE PLAYER DOES THE MINIGAME CORRECTLY
-        if (null == null)
+        if (isMixingDone)
         {
+            
             return true;
         }
         return false;

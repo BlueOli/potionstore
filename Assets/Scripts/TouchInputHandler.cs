@@ -12,11 +12,12 @@ public class TouchInputHandler : MonoBehaviour
 
     public Image filledBar; // Reference to the filled bar image
     public TextMeshProUGUI progressText; // Reference to the text displaying progress
+    public PotionMaker potionMaker;
 
     void Update()
     {
         // Check for touch input
-        if (Input.touchCount > 0)
+        if (Input.touchCount > 0 && potionMaker.isMixed)
         {
             Touch touch = Input.GetTouch(0);
 
@@ -43,6 +44,7 @@ public class TouchInputHandler : MonoBehaviour
                     mixedReady = true;
                     isSliding = false;
                     Debug.Log("Sliding gesture completed!");
+                    potionMaker.isMixingDone = true;
                 }
             }
             else if (touch.phase == TouchPhase.Ended)
