@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PotionMaker : MonoBehaviour
-{    
+{
 
     private PotionType potionType;
     private PlantType req1, req2, req3;
@@ -14,13 +14,14 @@ public class PotionMaker : MonoBehaviour
 
     public bool StopMaking { get => stopMaking; set => stopMaking = value; }
 
-    PotionType testPotion = new PotionType(PotionType.PotionTier.Tier1, new PlantType("Acorn", 1,1),1,"test","",1,1);
+    PotionType testPotion = new PotionType(PotionType.PotionTier.Tier1, new PlantType("Acorn", 1, 1), 1, "test", "", 1, 1);
 
     public void MakePotion(PotionType type)
     {
         potionType = type;
         DetermineRequirements(potionType);
         //CheckMaterials(potionType);
+        isAdding = true;
         WaitForMaterialAddition();
     }
     /*public void MakePotionTest()
@@ -37,7 +38,7 @@ public class PotionMaker : MonoBehaviour
         switch (pType.Type)
         {
             case PotionType.PotionTier.Tier1:
-                req1 = pType.Req1;                
+                req1 = pType.Req1;
                 break;
             case PotionType.PotionTier.Tier2:
                 req1 = pType.Req1;
@@ -66,7 +67,7 @@ public class PotionMaker : MonoBehaviour
 
                     return true;
                 }
-                else{Debug.LogError("Not enough materials to make the potion.");}
+                else { Debug.LogError("Not enough materials to make the potion."); }
                 break;
             case PotionType.PotionTier.Tier2:
                 if (HasEnoughMaterials(req1) && HasEnoughMaterials(req2))
@@ -75,7 +76,7 @@ public class PotionMaker : MonoBehaviour
                     //WaitForMaterialAddition();
                     return true;
                 }
-                else{Debug.LogError("Not enough materials to make the potion.");}
+                else { Debug.LogError("Not enough materials to make the potion."); }
                 break;
             case PotionType.PotionTier.Tier3:
                 if (HasEnoughMaterials(req1) && HasEnoughMaterials(req2) && HasEnoughMaterials(req3))
@@ -84,7 +85,7 @@ public class PotionMaker : MonoBehaviour
                     //WaitForMaterialAddition();
                     return true;
                 }
-                else{Debug.LogError("Not enough materials to make the potion.");}
+                else { Debug.LogError("Not enough materials to make the potion."); }
                 break;
             default:
                 Debug.LogError("Invalid potion type!");
@@ -93,7 +94,7 @@ public class PotionMaker : MonoBehaviour
         return false;
     }
 
-    
+
     /// <summary>
     /// Checks if the player has enough materials to make the potion, then subtracts the materials from the player's inventory
     /// </summary>
@@ -115,7 +116,7 @@ public class PotionMaker : MonoBehaviour
                 return true;
             }
         }
-        else if (material.typeID == 2) 
+        else if (material.typeID == 2)
         {
             if (roomManager.PlantQuantities.ContainsKey(material.plantName) && roomManager.GetPlantQuantity(material.plantName) > 0)
             {
@@ -123,24 +124,27 @@ public class PotionMaker : MonoBehaviour
                 return true;
             }
         }
-        
+
         return false;
     }
 
     private void WaitForMaterialAddition()
     {
         stopMaking = false;
-        StartCoroutine(WaitForMaterialCoroutine());       
+        StartCoroutine(WaitForMaterialCoroutine());
     }
-    
 
+    int tapCount = 0;
+    bool isMixed = false;
+    bool isAdding = false;
     // Example coroutine for waiting
     private IEnumerator WaitForMaterialCoroutine()
     {
+        tapCount = 0;
         Debug.Log("Waiting for material addition");
         while (!MaterialAddedToCaldreum())
         {
-            if (stopMaking) { break;}
+            if (stopMaking) { break; }
             yield return null;
         }
         if (stopMaking) { yield break; }
@@ -149,11 +153,63 @@ public class PotionMaker : MonoBehaviour
 
     private bool MaterialAddedToCaldreum()
     {
-        // Check if material has been added to caldreum        
-        // Return true if added, false otherwise
-        return CheckMaterials(potionType);
+        // Check if material has been added to caldreum
+        if (isMixed)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
+    bool isShaked;
+    void Update()
+    {
+        HandleUserInput();
+        if (isMixed)
+        {
+            isShaked = WaitingVesselShake();
+        }
+        
+    }
+    private void HandleUserInput()
+    {
+        //if (stopMaking) { return; }
 
+        // Check for user taps
+        if (Input.touchCount > 0 && isAdding)
+        {
+            Touch touch = Input.GetTouch(0);
+            if (touch.phase == TouchPhase.Began)
+            {
+                // Increment tapCount when the screen is tapped
+                tapCount++;
+                Debug.Log("Tap Count: " + tapCount);
+
+                // Check if tapCount is greater than or equal to 5
+                if (tapCount >= 5)
+                {
+                    isMixed = true;
+                    Debug.Log("Mixed");
+                    isAdding = false;
+                }
+            }
+        }
+
+        if (Input.GetMouseButtonDown(0) && isAdding)
+        {
+            // For editor testing: Increment tapCount when the mouse is clicked
+            tapCount++;
+            Debug.Log("Tap Count: " + tapCount);
+
+            // Check if tapCount is greater than or equal to 5
+            if (tapCount >= 5)
+            {
+                isMixed = true;
+            }
+        }
+    }
     private void WaitForMixing()
     {
         // Wait for function "MixCaldreum" to be called
@@ -173,7 +229,7 @@ public class PotionMaker : MonoBehaviour
 
     private void WaitForVessel()
     {
-        StartCoroutine(WaitForVesselMix());  
+        StartCoroutine(WaitForVesselMix());
     }
 
     private IEnumerator WaitForVesselMix()
@@ -188,9 +244,18 @@ public class PotionMaker : MonoBehaviour
         AddToVessel();
     }
     private Vector3 previousAcceleration;
-    private float shakeDetectionThreshold =10;
-
+    private float shakeDetectionThreshold = 10;
     private bool WaitingVessel()
+    {
+        if (isShaked)
+        {
+            return true;
+        }else
+        {
+            return false;
+        }
+    }
+    private bool WaitingVesselShake()
     {
         // Get the current acceleration
         Vector3 currentAcceleration = Input.acceleration;
@@ -218,7 +283,7 @@ public class PotionMaker : MonoBehaviour
     {
         // Mixing logic
         // IF THE PLAYER DOES THE MINIGAME CORRECTLY
-        if (null==null)
+        if (null == null)
         {
             return true;
         }
