@@ -145,7 +145,7 @@ public class PotionMaker : MonoBehaviour
         if (Input.touchCount > 0 && isAdding)
         {
             Touch touch = Input.GetTouch(0);
-            if (touch.phase == TouchPhase.Began)
+            if (touch.phase == TouchPhase.Began )
             {
                 // Increment tapCount when the screen is tapped
                 tapCount++;
@@ -159,7 +159,7 @@ public class PotionMaker : MonoBehaviour
 
         // For editor testing: Increment tapCount when the mouse is clicked
         if (Input.GetMouseButtonDown(0) && isAdding)
-        { tapCount++; Debug.Log("Tap Count: " + tapCount); if (tapCount >= 5) { isMixed = true; } }
+        { tapCount++; Debug.Log("Tap Count: " + tapCount); if (tapCount >= 5) { isMixed = true; isAdding = false; } }
     }
     private void WaitForMixing()
     {
@@ -230,6 +230,10 @@ public class PotionMaker : MonoBehaviour
     {        
         // Potion making process is complete
         Debug.Log("Added Potion");
+        isMixed = false;
+        isMixingDone = false;
+        tapCount = 0;
+        slideMinigameOne.fillAmount = 0;
         potionManager.UpdatePotionQuantity(potionType.Name, 1);
     }
 }

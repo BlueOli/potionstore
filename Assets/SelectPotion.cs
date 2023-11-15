@@ -13,22 +13,22 @@ public class SelectPotion : MonoBehaviour
         {
             case "HealthPotion":
                 Debug.Log(mySprite.name);
-                PotionType healthPotion = new PotionType(PotionType.PotionTier.Tier1, new PlantType("Acorn", 1, 1), 1, "Health Potion", "Cura al que la tome", 1, 1);
+                PotionType healthPotion = new PotionType(PotionType.PotionTier.Tier1, new PlantType("Acorn", 1, 1), 1, "HealthPotion", "Cura al que la tome", 1, 1);
                 potionMaker.MakePotion(healthPotion);
                 break;
             case "LovePotion":
                 Debug.Log(mySprite.name);
-                PotionType lovePotion = new PotionType(PotionType.PotionTier.Tier1, new PlantType("Acorn", 1, 1), 1, "Love Potion", "Enamora al que la tome", 1, 1);
+                PotionType lovePotion = new PotionType(PotionType.PotionTier.Tier1, new PlantType("Acorn", 1, 1), 1, "LovePotion", "Enamora al que la tome", 1, 1);
                 potionMaker.MakePotion(lovePotion);
                 break;
             case "ManaPotion":
                 Debug.Log(mySprite.name);
-                PotionType manaPotion = new PotionType(PotionType.PotionTier.Tier2, new PlantType("Acorn", 1, 1), new PlantType("FrozenRoot", 1, 1), 1 ,1, "Mana Potion", "Restablece el mana del que la tome", 1, 1);
+                PotionType manaPotion = new PotionType(PotionType.PotionTier.Tier2, new PlantType("Acorn", 1, 1), new PlantType("FrozenRoot", 1, 1), 1 ,1, "ManaPotion", "Restablece el mana del que la tome", 1, 1);
                 potionMaker.MakePotion(manaPotion);
                 break;
             case "PoisonPotion":
                 Debug.Log(mySprite.name);
-                PotionType poisonPotion = new PotionType(PotionType.PotionTier.Tier3, new PlantType("Acorn", 1, 1), new PlantType("HardRoot", 1, 1), new PlantType("SpikeGlobe", 1, 1),1,1, 1, "Poison Potion", "Envenena al que la tome", 1, 1);
+                PotionType poisonPotion = new PotionType(PotionType.PotionTier.Tier3, new PlantType("Acorn", 1, 1), new PlantType("HardRoot", 1, 1), new PlantType("SpikeGlobe", 1, 1),1,1, 1, "PoisonPotion", "Envenena al que la tome", 1, 1);
                 potionMaker.MakePotion(poisonPotion);
                 break;
             default:
