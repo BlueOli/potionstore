@@ -36,4 +36,11 @@ public class LoadingCircle : MonoBehaviour
         }   
         loadingBar.GetComponent<Image>().fillAmount = currentAmount / 100;
     }
+
+    public void ResetText()
+    {
+        currentAmount = 0;
+        textIndicator.GetComponent<TextMeshProUGUI>().text = ((int)currentAmount).ToString() + "%";
+    }
+
 }

@@ -22,6 +22,8 @@ public class PotionMaker : MonoBehaviour
     public ModuloBar moduloBar;
     public GameObject addingSlider;
     public GameObject shakingPotion;
+    public LoadingCircle loadingCircle;
+
 
     public bool StopMaking { get => stopMaking; set => stopMaking = value; }
 
@@ -205,6 +207,7 @@ public class PotionMaker : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         touchInputHandler.ResetVariables();
         mixingSlider.SetActive(true);
+        loadingCircle.ResetText();
         
     }
 
