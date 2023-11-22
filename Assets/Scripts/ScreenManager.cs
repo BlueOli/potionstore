@@ -59,7 +59,7 @@ public class ScreenManager : MonoBehaviour
         if (UnityEngine.ColorUtility.TryParseHtmlString(hexColorCode, out newColor))
         {
             pressedColor = new ColorBlock { normalColor = newColor , highlightedColor = HLC, pressedColor = PC, selectedColor = SC, disabledColor = DC,colorMultiplier = 1, fadeDuration=0.1f};
-            Button Store = GameObject.Find("Button_Store").GetComponent<Button>();
+            Button Store = GameObject.Find("Button_Lab").GetComponent<Button>();
             Store.colors = pressedColor;
         }
         else
