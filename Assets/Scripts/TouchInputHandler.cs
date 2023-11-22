@@ -13,6 +13,7 @@ public class TouchInputHandler : MonoBehaviour
     public Image filledBar; // Reference to the filled bar image
     public TextMeshProUGUI progressText; // Reference to the text displaying progress
     public PotionMaker potionMaker;
+    public LoadingCircle loadingCircle;
 
     void Update()
     {
@@ -31,12 +32,12 @@ public class TouchInputHandler : MonoBehaviour
                 // Continue sliding as long as the finger is on the screen
                 totalElapsedTime += Time.deltaTime;
                 slideProgress = Mathf.Clamp01(totalElapsedTime / slideDuration);
-
+                loadingCircle.CurrentAmount = slideProgress * 100;
                 // Update progress bar
                 filledBar.fillAmount = slideProgress;
 
                 // Update progress text
-                progressText.text = $"{Mathf.RoundToInt(slideProgress * 100)}%";
+                //progressText.text = $"{Mathf.RoundToInt(slideProgress * 100)}%";
 
                 // Check if sliding duration is completed
                 if (totalElapsedTime >= slideDuration)
@@ -54,6 +55,18 @@ public class TouchInputHandler : MonoBehaviour
             }
         }
     }
+
+    public void ResetVariables()
+    {
+        // Reset all variables
+        isSliding = false;
+        totalElapsedTime = 0f;
+        slideProgress = 0f;
+        mixedReady = false;
+        filledBar.fillAmount = 0f;
+        //progressText.text = "0%";
+    }
+    
 
     public bool MixedReady
     {

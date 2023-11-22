@@ -1,5 +1,4 @@
 using System.Collections;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,6 +18,7 @@ public class CropPot : MonoBehaviour
     public Sprite[] timerSprites12;
     public Sprite[] timerSprites15;
     public Sprite[] timerSprites20;
+    public GameObject checkMark;
 
     public bool CanOpenTypes { get => canOpenTypes; set => canOpenTypes = value; }
 
@@ -71,6 +71,7 @@ public class CropPot : MonoBehaviour
             {
                 // Plant is finished growing
                 SetStatus("Finished");
+                checkMark.SetActive(true);
                 isGrowing = false;
             }
         }else
@@ -79,6 +80,7 @@ public class CropPot : MonoBehaviour
         }
     }
 
+    #region Clock animations
     private void ClockOcho()
     {
         if (growthTimer < 1)
@@ -365,6 +367,8 @@ public class CropPot : MonoBehaviour
         }
     }
 
+    #endregion
+
     /// <summary>
     /// Starts growing the plant
     /// </summary>
@@ -387,7 +391,7 @@ public class CropPot : MonoBehaviour
             // TODO: Add the plant to the player's inventory, play a sound, etc.
             SetStatus("Collected");
             PlayerManager.Instance.AddMaterialToInventory(plantType);
-
+            checkMark.SetActive(false);
             // Reset the crop pot for the next use
             ResetCropPot();
             myImage.sprite = defImage;

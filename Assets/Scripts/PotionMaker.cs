@@ -17,6 +17,11 @@ public class PotionMaker : MonoBehaviour
     bool isAdding = false;
     bool isShaked;
     public bool isMixingDone = false;
+    public GameObject mixingSlider;
+    public TouchInputHandler touchInputHandler;
+    public ModuloBar moduloBar;
+    public GameObject addingSlider;
+    public GameObject shakingPotion;
 
     public bool StopMaking { get => stopMaking; set => stopMaking = value; }
 
@@ -26,6 +31,37 @@ public class PotionMaker : MonoBehaviour
         HandleUserInput();
 
         if (isMixed) { isShaked = WaitingVesselShake(); }
+
+        CheatFunction();
+    }
+
+    void CheatFunction()
+    {
+        // Skip potion making process
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            isMixed = true;
+            MixCaldreum();
+        }else if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            isShaked = true;
+        }
+
+        // Reset potion making process
+        if (Input.GetKeyDown(KeyCode.Alpha0))
+        {
+            isMixed = false;
+            isShaked = false;
+
+        }
+
+        // Add potions to inventory
+        if (Input.GetKeyDown(KeyCode.Alpha9))
+        {
+            potionManager.UpdatePotionQuantity("HealthPotion", 1);
+            PlayerManager.Instance.AddMaterialToInventory(new PlantType("Acorn",8,1));
+
+        }
     }
 
     public void MakePotion(PotionType type)
@@ -132,35 +168,46 @@ public class PotionMaker : MonoBehaviour
 
     private bool MaterialAddedToCaldreum()
     {
+        addingSlider.SetActive(true);
+
         // Check if material has been added to caldreum
         if (isMixed) { return true; }
         else { return false; }
     }
 
     
-    public Image slideMinigameOne;
     private void HandleUserInput()
     {        
         // Check for user taps
-        if (Input.touchCount > 0 && isAdding)
+        if ((Input.touchCount > 0 || Input.GetMouseButtonDown(0) )&& isAdding)
         {
             Touch touch = Input.GetTouch(0);
             if (touch.phase == TouchPhase.Began )
             {
                 // Increment tapCount when the screen is tapped
                 tapCount++;
-                slideMinigameOne.fillAmount = tapCount / 5f;
+                moduloBar.IncreaseProgress();
                 Debug.Log("Tap Count: " + tapCount);
 
                 // Check if tapCount is greater than or equal to 5
-                if (tapCount >= 5) { isMixed = true; Debug.Log("Mixed"); isAdding = false; }
+                if (tapCount >= 5) { isMixed = true; Debug.Log("Mixed"); isAdding = false; StartCoroutine(DeactivateAdding()); StartCoroutine(ActivateMixing()); }
             }
         }
-
-        // For editor testing: Increment tapCount when the mouse is clicked
-        if (Input.GetMouseButtonDown(0) && isAdding)
-        { tapCount++; Debug.Log("Tap Count: " + tapCount); if (tapCount >= 5) { isMixed = true; isAdding = false; } }
     }
+
+    private IEnumerator DeactivateAdding()
+    {
+        yield return new WaitForSeconds(0.5f);
+        addingSlider.SetActive(false);
+    }
+    private IEnumerator ActivateMixing()
+    {
+        yield return new WaitForSeconds(0.5f);
+        touchInputHandler.ResetVariables();
+        mixingSlider.SetActive(true);
+        
+    }
+
     private void WaitForMixing()
     {
         // Wait for function "MixCaldreum" to be called
@@ -175,12 +222,31 @@ public class PotionMaker : MonoBehaviour
             yield return null;
         }
         if (stopMaking) { yield break; }
+        StartCoroutine(DeactivateMixing());
         WaitForVessel();
     }
 
     private void WaitForVessel()
     {
+        StartCoroutine(ActivateShakingPotion());
         StartCoroutine(WaitForVesselMix());
+    }
+
+    private IEnumerator DeactivateMixing()
+    {
+          yield return new WaitForSeconds(0.5f);
+        mixingSlider.SetActive(false);
+        touchInputHandler.ResetVariables();
+    }
+    private IEnumerator DeactivateShakingPotion()
+    {
+        yield return new WaitForSeconds(0.5f);
+        shakingPotion.SetActive(false);
+    }
+    private IEnumerator ActivateShakingPotion()
+    {
+        yield return new WaitForSeconds(0.5f);
+        shakingPotion.SetActive(true);
     }
 
     private IEnumerator WaitForVesselMix()
@@ -222,18 +288,19 @@ public class PotionMaker : MonoBehaviour
     private bool MixCaldreum()
     {        
         // IF THE PLAYER DOES THE MINIGAME CORRECTLY
-        if (isMixingDone) { return true; }
+        if (isMixingDone) {  return true; }
         return false;
     }
 
     private void AddToVessel()
-    {        
+    {
+        StartCoroutine(DeactivateShakingPotion());
         // Potion making process is complete
         Debug.Log("Added Potion");
         isMixed = false;
         isMixingDone = false;
         tapCount = 0;
-        slideMinigameOne.fillAmount = 0;
+        moduloBar.Reset();
         potionManager.UpdatePotionQuantity(potionType.Name, 1);
     }
 }
