@@ -28,6 +28,7 @@ public class CropPot : MonoBehaviour
         if (button == null)
         {
             button = gameObject.AddComponent<Button>();
+            
         }
         defImage = GetComponent<Image>().sprite;
         myImage = GetComponent<Image>();

@@ -44,7 +44,7 @@ public class AddCropTypes : MonoBehaviour
                     imageComponent.sprite = image; //Set the image on the sprite atribute in the component
 
                     Button buttonComponent = imageObject.AddComponent<Button>();
-
+                    
                     // TODO Agregar el script que se encarga de setear el tipo de cultivo seleccionado
                     SelectCropType selectedCropTypeScript = imageObject.AddComponent<SelectCropType>();
                     plantType = CreatePlantType(imageObject.name, imageObject.GetComponent<Image>().sprite, cropType);
