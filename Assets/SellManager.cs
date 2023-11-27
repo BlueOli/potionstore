@@ -138,9 +138,21 @@ public class SellManager : MonoBehaviour
 
     public void DeclineButton()
     {
+        StartCoroutine(CancelarPedidos());
+
+        StartCoroutine(WaitForClient());
+    }
+
+    private void CancelarPedido()
+    {
         sellingContainer.SetActive(false);
         AddFame(-1);
-        StartCoroutine(WaitForClient());
+    }
+
+    IEnumerator CancelarPedidos()
+    {
+        yield return new WaitForSeconds(0.3f);
+        CancelarPedido();
     }
 
     IEnumerator WaitForClient()
